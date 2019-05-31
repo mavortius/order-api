@@ -162,3 +162,5 @@ fabric.properties
 .idea/
 dist/
 /dist/
+.stryker-tmp/3045913/
+.stryker-tmp/sandbox3554921/node_modules
