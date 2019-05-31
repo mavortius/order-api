@@ -1,3 +1,5 @@
+'use strict'
+
 import * as chai from 'chai'
 import chaiHttp = require('chai-http')
 import 'mocha'
@@ -11,7 +13,7 @@ describe('baseRoute', () => {
   it('should respond with HTTP 200 status', async () => {
     return chai
       .request(app)
-      .get('/index')
+      .get('/api')
       .then(res => {
         expect(res.status).to.be.equal(200)
       })
@@ -19,10 +21,9 @@ describe('baseRoute', () => {
   it('should respond with success message', async () => {
     return chai
       .request(app)
-      .get('/index')
+      .get('/api')
       .then(res => {
-        expect(res.body.status).to.be.equal('success')
+        expect(res.body.title).to.be.equal('Order API')
       })
   })
 })
-
