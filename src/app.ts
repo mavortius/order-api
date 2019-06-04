@@ -19,7 +19,7 @@ class App {
   public mongoPass: string
 
   constructor() {
-    const path = `${__dirname}/../.env;${process.env.NODE_ENV}`
+    const path = `${__dirname}/../.env.${process.env.NODE_ENV}`
     dotenv.config({ path: path })
     this.mongoUrl = `mongodb://${process.env.MONGODB_URL_PORT}/${process.env.MONGODB_DATABASE}`
     this.mongoUser = `${process.env.MONGODB_USER}`
