@@ -37,7 +37,7 @@ describe('orderRoute', () => {
   it('should be able to login and get the token to be used on orders requests', async () => {
     return chai
       .request(app)
-      .get('/users/login?username=mavortius&password=1234')
+      .get('/users/login?username=john&password=password')
       .then(res => {
         expect(res.status).to.be.equal(200)
         token = res.body.token
