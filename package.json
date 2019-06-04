@@ -14,6 +14,7 @@
     "stryker:init": "stryker init",
     "dev": "cross-env PORT=3000 NODE_ENV=dev ts-node ./src/server.ts",
     "prod": "PORT=3000 npm run build && npm run start",
+    "start": "NODE_ENV=prod node dist/server.js",
     "tsc": "tsc"
   },
   "engines": {
@@ -42,6 +43,10 @@
     "@types/passport-jwt": "^3.0.1",
     "@types/passport-local": "^1.0.33",
     "@types/winston": "^2.4.4",
+  },
+  "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/mongoose-unique-validator": "^1.0.1",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
     "mocha": "^5.2.0",
@@ -55,14 +60,11 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.2.1"
-  },
-  "dependencies": {
-    "@types/bcrypt": "^3.0.0",
-    "@types/mongoose-unique-validator": "^1.0.1",
+    "typescript": "^3.2.1",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
     "chai-http": "^4.2.1",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "express-winston": "^3.1.0",
     "halson": "^3.0.0",
