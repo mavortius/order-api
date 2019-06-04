@@ -42,7 +42,7 @@
     "@types/passport": "^1.0.0",
     "@types/passport-jwt": "^3.0.1",
     "@types/passport-local": "^1.0.33",
-    "@types/winston": "^2.4.4",
+    "@types/winston": "^2.4.4"
   },
   "dependencies": {
     "@types/bcrypt": "^3.0.0",
