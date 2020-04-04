@@ -3,8 +3,8 @@ import * as jwt from 'jsonwebtoken'
 import * as bcrypt from 'bcrypt'
 import { NextFunction, Request, Response } from 'express'
 import { formatOutput } from '../utilities/order-api-utility'
-import { UserModel } from '../schemas/user.schema'
 import { OrderAPILogger } from '../utilities/logger'
+import { UserModel } from '../schemas/user.schema'
 
 export let login = (req: Request, res: Response, next: NextFunction) => {
   const username = req.query.username

@@ -1,7 +1,17 @@
 import { Document, model, Model, Schema } from 'mongoose'
-import { default as Order } from '../models/order'
 
-export interface OrderModel extends Order, Document {
+export enum OrderStatus {
+  Placed = 'PLACED',
+  Approved = 'APPROVED',
+  Delivered = 'DELIVERED',
+}
+
+export interface Order extends Document {
+  userId: Number
+  quantity: Number
+  shipDate: Date
+  status: OrderStatus
+  complete: Boolean
 }
 
 export const OrderSchema: Schema = new Schema({
@@ -12,4 +22,4 @@ export const OrderSchema: Schema = new Schema({
   complete: Boolean,
 })
 
-export const OrderModel: Model<OrderModel> = model<OrderModel>('Order', OrderSchema)
+export const OrderModel: Model<Order> = model<Order>('Order', OrderSchema)

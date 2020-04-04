@@ -5,7 +5,7 @@ import 'mocha'
 import { OrderStatus } from '../../src/models/order-status'
 import app from '../../src/app'
 import chaiHttp = require('chai-http')
-import { OrderModel } from '../../src/schemas/order.schema'
+import { Order } from '../../src/schemas/order.schema'
 
 chai.use(chaiHttp)
 

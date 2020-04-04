@@ -4,7 +4,7 @@ import * as chai from 'chai'
 import * as bcrypt from 'bcrypt'
 import 'mocha'
 import app from '../../src/app'
-import { UserModel } from '../../src/schemas/user.schema'
+import { User } from '../../src/schemas/user.schema'
 import chaiHttp = require('chai-http')
 
 chai.use(chaiHttp)

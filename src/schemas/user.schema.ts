@@ -1,8 +1,14 @@
 import { Document, model, Model, Schema } from 'mongoose'
 import * as uniqueValidator from 'mongoose-unique-validator'
-import { default as User } from '../models/user'
 
-export interface UserModel extends User, Document {
+export interface User extends Document {
+  username: String
+  firstName: String
+  lastName: String
+  email: String
+  password: String
+  phone: String
+  userStatus: Number
 }
 
 export const UserSchema: Schema = new Schema({
@@ -17,4 +23,4 @@ export const UserSchema: Schema = new Schema({
 
 UserSchema.plugin(uniqueValidator)
 
-export const UserModel: Model<UserModel> = model<UserModel>('User', UserSchema)
+export const UserModel: Model<User> = model<User>('User', UserSchema)

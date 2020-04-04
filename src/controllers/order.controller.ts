@@ -2,9 +2,9 @@ import { NextFunction, Request, Response } from 'express'
 import * as halson from 'halson'
 import * as _ from 'lodash'
 import { OrderModel } from '../schemas/order.schema'
-import { UserModel } from '../schemas/user.schema'
 import { formatOutput } from '../utilities/order-api-utility'
 import { OrderAPILogger } from '../utilities/logger'
+import { UserModel } from '../schemas/user.schema'
 
 export let getOrder = (req: Request, res: Response, next: NextFunction) => {
   const id = req.params.id
